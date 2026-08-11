@@ -1,0 +1,18 @@
+[
+  {
+    "id": "p001",
+    "nombre": "Mouse óptico USB",
+    "descripcion": "Mouse óptico con cable USB, 3 botones.",
+    "precio": 35000,
+    "categoria": "mouse",
+    "imagen": "assets/img/productos/mouse-usb.jpg"
+  },
+  {
+    "id": "p002",
+    "nombre": "Teclado membrana en español",
+    "descripcion": "Teclado estándar en español, conexión USB.",
+    "precio": 55000,
+    "categoria": "teclado",
+    "imagen": "assets/img/productos/teclado-usb.jpg"
+  }
+]

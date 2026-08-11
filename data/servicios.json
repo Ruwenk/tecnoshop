@@ -1,0 +1,16 @@
+[
+  {
+    "id": "s001",
+    "nombre": "Mantenimiento preventivo de hardware",
+    "descripcion": "Limpieza interna, cambio de pasta térmica y revisión general.",
+    "precio": 40000,
+    "categoria": "mantenimiento"
+  },
+  {
+    "id": "s002",
+    "nombre": "Activación de Windows",
+    "descripcion": "Activación de licencia de Windows original.",
+    "precio": 25000,
+    "categoria": "software"
+  }
+]

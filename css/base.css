@@ -1,0 +1,46 @@
+/* ==========================================================================
+   TecnoShop — Base
+   Reset, variables y tipografía general
+   ========================================================================== */
+
+:root {
+  /* TODO: reemplazar por la paleta y tipografía definitivas al cerrar el
+     diseño (wireframes / Fase de Planeación) */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1e40af;
+  --color-text: #1f2937;
+  --color-bg: #ffffff;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  --font-base: 'Segoe UI', system-ui, sans-serif;
+  --radius: 6px;
+  --spacing: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
