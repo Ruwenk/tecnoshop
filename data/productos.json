@@ -1,18 +1,42 @@
 [
   {
     "id": "p001",
-    "nombre": "Mouse óptico USB",
-    "descripcion": "Mouse óptico con cable USB, 3 botones.",
+    "nombre": "Mouse inalámbrico",
+    "descripcion": "Mouse genius alta resistencia.",
     "precio": 35000,
     "categoria": "mouse",
-    "imagen": "assets/img/productos/mouse-usb.jpg"
+    "imagen": "assets/img/productos/mouse-inalambrico.jpg"
   },
   {
     "id": "p002",
-    "nombre": "Teclado membrana en español",
-    "descripcion": "Teclado estándar en español, conexión USB.",
+    "nombre": "Teclado retroiluminado",
+    "descripcion": "Teclado RGB inalámbrico.",
     "precio": 55000,
     "categoria": "teclado",
-    "imagen": "assets/img/productos/teclado-usb.jpg"
+    "imagen": "assets/img/productos/teclado-retroiluminado.jpg"
+  },
+  {
+    "id": "p003",
+    "nombre": "Base para portátil",
+    "descripcion": "Resistente, con ventiladores.",
+    "precio": 45000,
+    "categoria": "accesorios",
+    "imagen": "assets/img/productos/base-portatil.jpg"
+  },
+  {
+    "id": "p004",
+    "nombre": "Memorias USB",
+    "descripcion": "Paquete de memorias USB de 32 GB c/u.",
+    "precio": 100000,
+    "categoria": "almacenamiento",
+    "imagen": "assets/img/productos/memorias-usb.jpg"
+  },
+  {
+    "id": "p005",
+    "nombre": "Audífonos de diadema",
+    "descripcion": "Inalámbricos, con accesorios.",
+    "precio": 80000,
+    "categoria": "audio",
+    "imagen": "assets/img/productos/audifonos-diadema.jpg"
   }
 ]

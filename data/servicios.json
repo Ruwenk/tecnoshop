@@ -1,16 +1,20 @@
 [
   {
     "id": "s001",
-    "nombre": "Mantenimiento preventivo de hardware",
-    "descripcion": "Limpieza interna, cambio de pasta térmica y revisión general.",
-    "precio": 40000,
+    "nombre": "Reparación y mantenimiento",
+    "descripcion": "Repotenciamos tu equipo para mejorar su eficiencia; realizamos mantenimiento técnico preventivo, predictivo y correctivo.",
     "categoria": "mantenimiento"
   },
   {
     "id": "s002",
-    "nombre": "Activación de Windows",
-    "descripcion": "Activación de licencia de Windows original.",
-    "precio": 25000,
+    "nombre": "Formateo y reinstalaciones",
+    "descripcion": "Formateamos tu equipo conservando tus datos y reinstalamos el sistema operativo de forma segura, con activación de Windows y Office.",
     "categoria": "software"
+  },
+  {
+    "id": "s003",
+    "nombre": "Asistencia remota",
+    "descripcion": "Atendemos tus necesidades informáticas a través de teleasistencia: te guiamos paso a paso y resolvemos tus dudas e inquietudes.",
+    "categoria": "remoto"
   }
 ]

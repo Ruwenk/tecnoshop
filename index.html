@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TecnoShop | Inicio</title>
-  <meta name="description" content="Mantenimiento técnico, activación de software y venta de accesorios de cómputo.">
+  <meta name="description" content="Soporte y mantenimiento de equipos: instalación y activación de Windows y Office, reparación y mantenimiento, venta de accesorios para computadores.">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -15,22 +12,42 @@
     <nav class="nav">
       <a href="index.html" class="nav__logo">TecnoShop</a>
       <ul class="nav__links">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html" class="is-active">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="nosotros.html">Conócenos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- TODO: contenido de Inicio (maquetación HTML, Quincena 2) -->
+    <section class="hero">
+      <p class="hero__tagline-top">Soporte y mantenimiento de equipos: instalación y activación de Windows y Office, reparación y mantenimiento, venta de accesorios para computadores.</p>
+      <h1>Tecnoshop</h1>
+      <p class="hero__badge">soluciones informáticas y a un click</p>
+      <p class="hero__desc">En Tecnoshop te ofrecemos servicio técnico especializado, presencial y remoto, además encuentra accesorios para tu equipo a precios increíbles.</p>
+      <div class="hero__actions">
+        <a href="contacto.html" class="btn">Contáctanos</a>
+      </div>
+    </section>
+
+
+    <section class="destacados">
+      <h2>¿Por qué elegirnos?</h2>
+      <ul>
+        <li>Atención personalizada</li>
+        <li>Precios accesibles</li>
+        <li>Respuesta rápida por WhatsApp</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2026 TecnoShop. Todos los derechos reservados.</p>
   </footer>
+
+  <button class="cart-float" aria-label="Ver carrito">🛒</button>
 
   <script src="js/carrito.js" defer></script>
 </body>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TecnoShop | Servicios</title>
-  <meta name="description" content="Mantenimiento técnico de hardware, activación de Windows y de Microsoft Office.">
+  <meta name="description" content="Reparación y mantenimiento, formateo y reinstalaciones, asistencia remota.">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -16,23 +16,47 @@
       <a href="index.html" class="nav__logo">TecnoShop</a>
       <ul class="nav__links">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="servicios.html" class="is-active">Servicios</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="nosotros.html">Conócenos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- TODO: maquetación de la sección Servicios (Quincena 2) -->
-    <!-- TODO: catálogo dinámico de servicios desde data/servicios.json (Quincena 6-7) -->
-    <div id="lista-servicios"></div>
+    <!-- Maquetación estática de la Quincena 2. A partir de la Quincena 6-7
+         este listado se reemplaza por render dinámico desde data/servicios.json
+         mediante js/catalogo.js y js/filtros.js. Servicios = por cotización,
+         sin precio fijo (a diferencia de productos). -->
+    <section class="catalogo" id="lista-servicios">
+      <h1>Conoce nuestros servicios</h1>
+
+      <article class="card">
+        <h2>Reparación y mantenimiento</h2>
+        <p>Repotenciamos tu equipo para mejorar su eficiencia; realizamos mantenimiento técnico preventivo, predictivo y correctivo.</p>
+        <a href="contacto.html" class="btn">Cotizar</a>
+      </article>
+
+      <article class="card">
+        <h2>Formateo y reinstalaciones</h2>
+        <p>Formateamos tu equipo conservando tus datos y reinstalamos el sistema operativo de forma segura, con activación de Windows y Office.</p>
+        <a href="contacto.html" class="btn">Cotizar</a>
+      </article>
+
+      <article class="card">
+        <h2>Asistencia remota</h2>
+        <p>Atendemos tus necesidades informáticas a través de teleasistencia: te guiamos paso a paso y resolvemos tus dudas e inquietudes.</p>
+        <a href="contacto.html" class="btn">Cotizar</a>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2026 TecnoShop. Todos los derechos reservados.</p>
   </footer>
+
+  <button class="cart-float" aria-label="Ver carrito">🛒</button>
 
   <script src="js/carrito.js" defer></script>
   <script src="js/catalogo.js" defer></script>
