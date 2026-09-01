@@ -1,21 +1,35 @@
 /* ==========================================================================
    TecnoShop — Base
    Reset, variables y tipografía general
+
+   Paleta tomada del diseño de Canva (valores aproximados — ajustar con el
+   gotero de color de Canva si se necesita el hex exacto).
    ========================================================================== */
 
 :root {
-  /* TODO: reemplazar por la paleta y tipografía definitivas al cerrar el
-     diseño (wireframes / Fase de Planeación) */
-  --color-primary: #2563eb;
-  --color-primary-dark: #1e40af;
-  --color-text: #1f2937;
-  --color-bg: #ffffff;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
+  --color-navy: #1b2a38;
+  --color-navy-dark: #101b24;
+  --color-lime: #8bc34a;
+  --color-lime-dark: #6b9e37;
+  --color-forest-dark: #101a0d;
+  --color-forest-darker: #0a120a;
+  --color-white: #ffffff;
+  --color-text-light: #f2f2f2;
+  --color-text-dark: #1f2937;
+  --color-muted: rgba(255, 255, 255, 0.75);
 
-  --font-base: 'Segoe UI', system-ui, sans-serif;
-  --radius: 6px;
+  /* Fondos tipo foto (Quincena de estilos) — reemplazar por
+     background-image: url('../assets/img/....jpg') cuando exporten
+     las fotos reales desde Canva. Mientras tanto, degradado de color
+     que imita el tono de cada foto. */
+  --bg-hero: linear-gradient(160deg, #223c4a 0%, #3f7a8c 55%, #8fb9bd 100%);
+  --bg-forest: linear-gradient(180deg, #0d150c 0%, var(--color-forest-dark) 100%);
+
+  --font-base: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --radius: 10px;
+  --radius-pill: 999px;
   --spacing: 1rem;
+  --max-width: 1180px;
 }
 
 * {
@@ -26,8 +40,8 @@
 
 body {
   font-family: var(--font-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--color-text-dark);
+  background-color: var(--color-white);
   line-height: 1.5;
 }
 
@@ -43,4 +57,15 @@ img {
 
 ul {
   list-style: none;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }

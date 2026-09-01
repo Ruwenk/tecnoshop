@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TecnoShop | Productos</title>
   <meta name="description" content="Accesorios de cómputo: mouses, teclados, audífonos, memorias y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -17,22 +19,72 @@
       <ul class="nav__links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html" class="is-active">Productos</a></li>
+        <li><a href="nosotros.html">Conócenos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- TODO: maquetación del catálogo de Productos (Quincena 2-3) -->
-    <!-- TODO: catálogo dinámico + filtros + buscador desde data/productos.json (Quincena 6-7) -->
-    <div id="lista-productos"></div>
+    <!-- Maquetación estática. A partir de la Quincena 6-7 este listado se
+         reemplaza por render dinámico + filtros/buscador desde
+         data/productos.json mediante js/catalogo.js y js/filtros.js.
+         .card__img es un marcador de posición (emoji) — reemplazar por
+         <img src="assets/img/productos/xxx.jpg"> con la foto real. -->
+    <section class="catalogo" id="lista-productos">
+      <h1>Nuestros productos</h1>
+      <div class="catalogo__grid">
+
+        <article class="card">
+          <div class="card__img">🖱️</div>
+          <h2>Mouse inalámbrico</h2>
+          <p>Mouse genius alta resistencia.</p>
+          <p class="card__precio">Valor: $35.000</p>
+          <a href="contacto.html" class="btn btn--small">Solicitar</a>
+        </article>
+
+        <article class="card">
+          <div class="card__img">⌨️</div>
+          <h2>Teclado retroiluminado</h2>
+          <p>Teclado RGB inalámbrico.</p>
+          <p class="card__precio">Valor: $55.000</p>
+          <a href="contacto.html" class="btn btn--small">Solicitar</a>
+        </article>
+
+        <article class="card">
+          <div class="card__img">💻</div>
+          <h2>Base para portátil</h2>
+          <p>Resistente, con ventiladores.</p>
+          <p class="card__precio">Valor: $45.000</p>
+          <a href="contacto.html" class="btn btn--small">Solicitar</a>
+        </article>
+
+        <article class="card">
+          <div class="card__img">💾</div>
+          <h2>Memorias USB</h2>
+          <p>Paquete de memorias USB de 32 GB c/u.</p>
+          <p class="card__precio">Valor: $100.000</p>
+          <a href="contacto.html" class="btn btn--small">Solicitar</a>
+        </article>
+
+        <article class="card">
+          <div class="card__img">🎧</div>
+          <h2>Audífonos de diadema</h2>
+          <p>Inalámbricos, con accesorios.</p>
+          <p class="card__precio">Valor: $80.000</p>
+          <a href="contacto.html" class="btn btn--small">Solicitar</a>
+        </article>
+
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2026 TecnoShop. Todos los derechos reservados.</p>
   </footer>
+
+  <button class="cart-float" aria-label="Ver carrito">🛒</button>
 
   <script src="js/carrito.js" defer></script>
   <script src="js/catalogo.js" defer></script>

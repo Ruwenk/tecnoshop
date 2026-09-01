@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TecnoShop | Servicios</title>
   <meta name="description" content="Reparación y mantenimiento, formateo y reinstalaciones, asistencia remota.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -25,30 +27,33 @@
   </header>
 
   <main>
-    <!-- Maquetación estática de la Quincena 2. A partir de la Quincena 6-7
-         este listado se reemplaza por render dinámico desde data/servicios.json
-         mediante js/catalogo.js y js/filtros.js. Servicios = por cotización,
-         sin precio fijo (a diferencia de productos). -->
+    <!-- Maquetación estática. A partir de la Quincena 6-7 este listado se
+         reemplaza por render dinámico desde data/servicios.json mediante
+         js/catalogo.js y js/filtros.js. Servicios = por cotización, sin
+         precio fijo (a diferencia de productos). -->
     <section class="catalogo" id="lista-servicios">
       <h1>Conoce nuestros servicios</h1>
+      <div class="catalogo__grid">
 
-      <article class="card">
-        <h2>Reparación y mantenimiento</h2>
-        <p>Repotenciamos tu equipo para mejorar su eficiencia; realizamos mantenimiento técnico preventivo, predictivo y correctivo.</p>
-        <a href="contacto.html" class="btn">Cotizar</a>
-      </article>
+        <article class="card">
+          <h2>Reparación y mantenimiento</h2>
+          <p>Repotenciamos tu equipo para mejorar su eficiencia; realizamos mantenimiento técnico preventivo, predictivo y correctivo.</p>
+          <a href="contacto.html" class="btn btn--small">Cotizar</a>
+        </article>
 
-      <article class="card">
-        <h2>Formateo y reinstalaciones</h2>
-        <p>Formateamos tu equipo conservando tus datos y reinstalamos el sistema operativo de forma segura, con activación de Windows y Office.</p>
-        <a href="contacto.html" class="btn">Cotizar</a>
-      </article>
+        <article class="card">
+          <h2>Formateo y reinstalaciones</h2>
+          <p>Formateamos tu equipo conservando tus datos y reinstalamos el sistema operativo de forma segura, con activación de Windows y Office.</p>
+          <a href="contacto.html" class="btn btn--small">Cotizar</a>
+        </article>
 
-      <article class="card">
-        <h2>Asistencia remota</h2>
-        <p>Atendemos tus necesidades informáticas a través de teleasistencia: te guiamos paso a paso y resolvemos tus dudas e inquietudes.</p>
-        <a href="contacto.html" class="btn">Cotizar</a>
-      </article>
+        <article class="card">
+          <h2>Asistencia remota</h2>
+          <p>Atendemos tus necesidades informáticas a través de teleasistencia: te guiamos paso a paso y resolvemos tus dudas e inquietudes.</p>
+          <a href="contacto.html" class="btn btn--small">Cotizar</a>
+        </article>
+
+      </div>
     </section>
   </main>
 

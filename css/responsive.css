@@ -1,12 +1,37 @@
 /* ==========================================================================
    TecnoShop — Responsive
-   Media queries (mobile-first). Se completa en la Quincena 5.
+   Mobile-first: por defecto (menor a 768px) el nav envuelve y el
+   layout de contacto se apila en una sola columna.
    ========================================================================== */
+
+/* Menor a tablet: nav en columna, contacto apilado */
+@media (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+  }
+
+  .contacto__layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .redes {
+    align-items: center;
+  }
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .catalogo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Escritorio */
 @media (min-width: 1024px) {
+  .catalogo__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

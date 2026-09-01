@@ -4,4 +4,4 @@
 
 // TODO: agregarAlCarrito(producto)
 // TODO: leerCarrito() / guardarCarrito(carrito)
-// TODO: actualizar contador del carrito en el nav
+// TODO: actualizar contador del carrito en el nav (botón .cart-float)

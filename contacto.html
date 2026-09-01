@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TecnoShop | Contacto</title>
-  <meta name="description" content="Contáctanos por WhatsApp o correo electrónico.">
+  <meta name="description" content="Contáctanos por WhatsApp, redes sociales o formulario.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -18,22 +20,56 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nosotros.html">Conócenos</a></li>
+        <li><a href="contacto.html" class="is-active">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- TODO: formulario de contacto (mailto: / WhatsApp) (Quincena 2 y 8) -->
-    <form class="form" id="form-contacto">
-      <!-- TODO: campos nombre, ciudad, teléfono, mensaje -->
-    </form>
+    <section class="contacto-hero">
+      <h1>Contáctanos</h1>
+
+      <div class="contacto__layout">
+        <div class="redes">
+          <h2>Visita nuestras<br>redes sociales</h2>
+          <div class="redes__iconos">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="TikTok">TT</a>
+            <a href="#" aria-label="X">X</a>
+          </div>
+        </div>
+
+        <!-- Formulario sin backend: se envía por mailto: o WhatsApp
+             (lógica en js/contacto.js, Quincena 8) -->
+        <form class="form" id="form-contacto">
+          <h2>Form Contact</h2>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" required>
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" required>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <div class="equipo-foto">
+          Foto del equipo<br>(reemplazar por la foto real exportada de Canva)
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>&copy; 2026 TecnoShop. Todos los derechos reservados.</p>
   </footer>
+
+  <button class="cart-float" aria-label="Ver carrito">🛒</button>
 
   <script src="js/carrito.js" defer></script>
   <script src="js/contacto.js" defer></script>

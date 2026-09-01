@@ -1,34 +1,360 @@
 /* ==========================================================================
    TecnoShop — Componentes
-   Header/nav, tarjetas de producto/servicio, botones, formulario, footer
-   Se completa durante la maquetación HTML/CSS (Quincena 2-5)
    ========================================================================== */
 
-/* Header / navegación */
+/* ---------- Header / navegación ---------- */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1rem 1.5rem 0;
 }
 
 .nav {
+  width: 100%;
+  margin: 0;
+  background-color: var(--color-navy);
+  border-radius: var(--radius-pill);
+  padding: 0.85rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .nav__logo {
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__logo::before {
+  content: "⚓";
 }
 
 .nav__links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-/* Tarjetas de catálogo (productos / servicios) */
-.card {
+.nav__links a {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
 }
 
-/* Botones */
+.nav__links a:hover,
+.nav__links a.is-active {
+  border-bottom-color: var(--color-lime);
+}
+
+/* ---------- Botones ---------- */
 .btn {
+  display: inline-block;
+  background-color: var(--color-lime);
+  color: var(--color-navy-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  padding: 0.7rem 1.75rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
 }
 
-/* Formulario de contacto */
+.btn:hover {
+  background-color: var(--color-lime-dark);
+}
+
+.btn--small {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+}
+
+/* ---------- Hero (Inicio / Contacto usan el mismo fondo tipo foto) ---------- */
+.hero,
+.contacto-hero {
+  background: var(--bg-hero);
+  /* TODO: reemplazar por foto real exportada de Canva, por ejemplo:
+     background-image: url('../assets/img/hero-montana.jpg');
+     background-size: cover; background-position: center; */
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--color-white);
+}
+
+.hero__tagline-top {
+  max-width: 700px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: var(--color-navy-dark);
+  margin-bottom: 1rem;
+}
+
+.hero__badge {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.25rem;
+}
+
+.hero__desc {
+  max-width: 560px;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Secciones con fondo oscuro tipo bosque (Servicios / Productos) ---------- */
+.catalogo {
+  background: var(--bg-forest);
+  /* TODO: reemplazar por foto real exportada de Canva, por ejemplo:
+     background-image: url('../assets/img/bosque.jpg');
+     background-size: cover; background-position: center; */
+  color: var(--color-white);
+  padding: 3rem 1.5rem 4rem;
+}
+
+.catalogo h1 {
+  max-width: var(--max-width);
+  margin: 0 auto 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.catalogo__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- Tarjetas ---------- */
+.card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-lime);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  /* TODO: reemplazar este bloque por <img src="assets/img/productos/xxx.jpg">
+     cuando exporten las fotos reales desde Canva */
+}
+
+.card h2 {
+  font-size: 1.05rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  flex-grow: 1;
+}
+
+.card__precio {
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.card .btn {
+  align-self: flex-start;
+}
+
+/* ---------- Sección "¿Por qué elegirnos?" (Inicio) ---------- */
+.destacados {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.destacados h2 {
+  margin-bottom: 1.5rem;
+}
+
+.destacados ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+/* ---------- Contacto ---------- */
+.contacto-hero {
+  min-height: auto;
+  padding: 3rem 1.5rem 4rem;
+  align-items: stretch;
+}
+
+.contacto-hero h1 {
+  color: var(--color-navy-dark);
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.contacto__layout {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  text-align: left;
+}
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.redes h2 {
+  font-size: 1rem;
+}
+
+.redes__iconos {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.redes__iconos a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
 .form {
+  background-color: var(--color-navy);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 380px;
+  margin: 0 auto;
 }
 
-/* Footer */
+.form h2 {
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.form label {
+  display: block;
+  color: var(--color-white);
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-base);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form .btn {
+  width: 100%;
+  background-color: var(--color-white);
+  color: var(--color-navy-dark);
+}
+
+.form .btn:hover {
+  background-color: var(--color-text-light);
+}
+
+.equipo-foto {
+  width: 100%;
+  min-height: 260px;
+  border-radius: var(--radius);
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem;
+  /* TODO: reemplazar por <img src="assets/img/equipo.jpg"> con la foto real */
+}
+
+/* ---------- Carrito flotante ---------- */
+.cart-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 60;
+}
+
+/* ---------- Footer ---------- */
 .site-footer {
+  background-color: var(--color-navy);
+  color: var(--color-muted);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
 }
