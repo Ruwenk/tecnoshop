@@ -1,6 +1,73 @@
 // TecnoShop — Catálogo dinámico
-// Se implementa en la Quincena 6: fetch() de data/productos.json y
-// data/servicios.json, y render de tarjetas en el DOM.
+// Quincena 6: fetch() de data/productos.json y render de tarjetas en el DOM.
 
-// TODO: fetch('data/productos.json') / fetch('data/servicios.json')
-// TODO: función renderTarjetas(lista, contenedor)
+(function () {
+  'use strict';
+
+  const RUTA_PRODUCTOS = 'data/productos.json';
+
+  const EMOJI_POR_CATEGORIA = {
+    mouse: '🖱️',
+    teclado: '⌨️',
+    accesorios: '💻',
+    almacenamiento: '💾',
+    audio: '🎧'
+  };
+
+  const formatoCOP = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    maximumFractionDigits: 0
+  });
+
+  function tarjetaProducto(producto) {
+    const emoji = EMOJI_POR_CATEGORIA[producto.categoria] || '🛒';
+    return [
+      '<article class="card" data-id="' + producto.id + '" data-nombre="' + producto.nombre + '" data-precio="' + producto.precio + '" data-imagen="' + producto.imagen + '">',
+      '  <div class="card__img">' + emoji + '</div>',
+      '  <h2>' + producto.nombre + '</h2>',
+      '  <p>' + producto.descripcion + '</p>',
+      '  <p class="card__precio">Valor: ' + formatoCOP.format(producto.precio) + '</p>',
+      '  <button type="button" class="btn btn--small" data-agregar>Agregar al carrito</button>',
+      '</article>'
+    ].join('');
+  }
+
+  function renderTarjetas(lista, contenedor) {
+    if (!lista.length) {
+      contenedor.innerHTML = '<p>No hay productos disponibles.</p>';
+      return;
+    }
+    contenedor.innerHTML = lista.map(tarjetaProducto).join('');
+  }
+
+  function cargarProductos() {
+    const seccion = document.getElementById('lista-productos');
+    if (!seccion) return;
+
+    const contenedor = seccion.querySelector('.catalogo__grid');
+    if (!contenedor) return;
+
+    fetch(RUTA_PRODUCTOS)
+      .then(function (respuesta) {
+        if (!respuesta.ok) throw new Error('No se pudo cargar el catálogo');
+        return respuesta.json();
+      })
+      .then(function (productos) {
+        renderTarjetas(productos, contenedor);
+        // Otros scripts (filtros.js) pueden necesitar la lista completa.
+        window.TecnoProductos = productos;
+        document.dispatchEvent(new CustomEvent('productos:cargados', { detail: productos }));
+      })
+      .catch(function (error) {
+        contenedor.innerHTML = '<p>No se pudieron cargar los productos. Intenta de nuevo más tarde.</p>';
+        console.error('Error al cargar productos:', error);
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cargarProductos);
+  } else {
+    cargarProductos();
+  }
+})();
