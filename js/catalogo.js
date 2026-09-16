@@ -66,7 +66,7 @@
       })
       .then(function (productos) {
         renderTarjetas(productos, contenedor);
-        // Otros scripts (filtros.js) pueden necesitar la lista completa.
+        // Otros scripts (filtros.js) lista de productos global
         window.TecnoProductos = productos;
         document.dispatchEvent(new CustomEvent('productos:cargados', { detail: productos }));
       })
