@@ -20,6 +20,14 @@
     maximumFractionDigits: 0
   });
 
+  const WHATSAPP_NUMERO = '573147133443';
+
+  function enlaceWhatsapp(producto) {
+    const mensaje = 'Hola, quiero comprar el producto: ' + producto.nombre +
+      ' (' + formatoCOP.format(producto.precio) + ')';
+    return 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(mensaje);
+  }
+
   function tarjetaProducto(producto) {
     const emoji = EMOJI_POR_CATEGORIA[producto.categoria] || '🛒';
     return [
@@ -28,7 +36,10 @@
       '  <h2>' + producto.nombre + '</h2>',
       '  <p>' + producto.descripcion + '</p>',
       '  <p class="card__precio">Valor: ' + formatoCOP.format(producto.precio) + '</p>',
-      '  <button type="button" class="btn btn--small" data-agregar>Agregar al carrito</button>',
+      '  <div class="card__acciones">',
+      '    <button type="button" class="btn btn--small" data-agregar>Agregar al carrito</button>',
+      '    <a class="btn btn--small btn--comprar" href="' + enlaceWhatsapp(producto) + '" target="_blank" rel="noopener">Comprar</a>',
+      '  </div>',
       '</article>'
     ].join('');
   }

@@ -201,6 +201,21 @@
   align-self: flex-start;
 }
 
+.card__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn--comprar {
+  background-color: #25d366;
+  color: var(--color-navy-dark);
+}
+
+.btn--comprar:hover {
+  background-color: #1ebe5b;
+}
+
 /* ---------- Sección "¿Por qué elegirnos?" (Inicio) ---------- */
 .destacados {
   max-width: var(--max-width);
