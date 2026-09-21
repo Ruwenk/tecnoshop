@@ -38,5 +38,13 @@
     "precio": 80000,
     "categoria": "audio",
     "imagen": "assets/img/productos/audifonos-diadema.jpg"
+  },
+  {
+    "id": "p006",
+    "nombre": "Mousepad gamer",
+    "descripcion": "Mousepad gamer XL, superficie antideslizante.",
+    "precio": 25000,
+    "categoria": "accesorios",
+    "imagen": "assets/img/productos/mousepad-gamer.jpg"
   }
 ]

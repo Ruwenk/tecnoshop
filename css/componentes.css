@@ -140,7 +140,7 @@
      background-image: url('../assets/img/bosque.jpg');
      background-size: cover; background-position: center; */
   color: var(--color-white);
-  padding: 3rem 1.5rem 4rem;
+  padding: 2rem 2rem 4rem;
 }
 
 .catalogo h1 {
@@ -155,7 +155,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 /* ---------- Tarjetas ---------- */
@@ -341,14 +341,16 @@
   min-height: 260px;
   border-radius: var(--radius);
   background-color: rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  font-size: 0.85rem;
-  text-align: center;
-  padding: 1rem;
-  /* TODO: reemplazar por <img src="assets/img/equipo.jpg"> con la foto real */
+  overflow: hidden;
+}
+
+.equipo-foto img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
 }
 
 /* ---------- Carrito flotante ---------- */
@@ -574,7 +576,62 @@ body.carrito-abierto {
 .site-footer {
   background-color: var(--color-navy);
   color: var(--color-muted);
-  text-align: center;
-  padding: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.site-footer__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.site-footer__titulo {
+  color: var(--color-white);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer__col p {
+  max-width: 32ch;
+}
+
+.site-footer__col li + li {
+  margin-top: 0.25rem;
+}
+
+.site-footer a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.site-footer a:hover,
+.site-footer a[aria-current="page"] {
+  color: var(--color-white);
+  border-bottom-color: var(--color-lime);
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.site-footer__base {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  /* margen derecho extra para que el botón flotante del carrito no tape "Volver arriba" */
+  padding: 1rem 5.5rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1rem;
   font-size: 0.8rem;
 }

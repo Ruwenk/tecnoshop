@@ -31,6 +31,7 @@
          reemplaza por render dinámico desde data/servicios.json mediante
          js/catalogo.js y js/filtros.js. Servicios = por cotización, sin
          precio fijo (a diferencia de productos). -->
+         
     <section class="catalogo" id="lista-servicios">
       <h1>Conoce nuestros servicios</h1>
       <div class="catalogo__grid">
@@ -52,13 +53,43 @@
           <p>Atendemos tus necesidades informáticas a través de teleasistencia: te guiamos paso a paso y resolvemos tus dudas e inquietudes.</p>
           <a href="contacto.html" class="btn btn--small">Cotizar</a>
         </article>
-
+<p> contactanos para tener el gusto de atenderlo y brindarle el mejor servicio posible. </p>
+        </section>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 TecnoShop. Todos los derechos reservados.</p>
+    <div class="site-footer__grid">
+      <div class="site-footer__col">
+        <h2 class="site-footer__titulo">TecnoShop</h2>
+        <p>Soporte técnico, mantenimiento y accesorios para tu computador, presencial y remoto.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-labelledby="footer-nav-titulo">
+        <h2 class="site-footer__titulo" id="footer-nav-titulo">Navegación</h2>
+        <ul>
+          <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Conócenos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__titulo">Escríbenos</h2>
+        <ul>
+          <li><a href="https://wa.me/573147133443" target="_blank" rel="noopener">WhatsApp: +57 314 713 3443<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+          <li><a href="contacto.html">Formulario de contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__base">
+      <p>&copy; 2026 TecnoShop. Todos los derechos reservados.</p>
+      <a href="#top">Volver arriba</a>
+    </div>
   </footer>
 
   <button class="cart-float" aria-label="Ver carrito">🛒</button>

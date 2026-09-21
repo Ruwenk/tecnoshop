@@ -23,6 +23,10 @@
 
 /* Tablet */
 @media (min-width: 768px) {
+  .site-footer__grid {
+    grid-template-columns: 1.4fr 1fr 1.4fr;
+  }
+
   .catalogo__grid {
     grid-template-columns: repeat(2, 1fr);
   }

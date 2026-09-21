@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Equipo de TecnoShop</title>
+  <desc id="desc">Foto provisional del equipo, pendiente de reemplazo por la foto real.</desc>
+
+  <rect width="800" height="500" fill="#1b2a38"/>
+  <rect width="800" height="500" fill="url(#degradado)"/>
+
+  <defs>
+    <linearGradient id="degradado" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2a38"/>
+      <stop offset="100%" stop-color="#101b24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Siluetas del equipo -->
+  <g fill="#8bc34a">
+    <circle cx="260" cy="230" r="55"/>
+    <path d="M150 400c0-70 50-115 110-115s110 45 110 115z"/>
+  </g>
+  <g fill="#6b9e37">
+    <circle cx="400" cy="205" r="65"/>
+    <path d="M270 400c0-85 60-135 130-135s130 50 130 135z"/>
+  </g>
+  <g fill="#8bc34a">
+    <circle cx="545" cy="230" r="55"/>
+    <path d="M435 400c0-70 50-115 110-115s110 45 110 115z"/>
+  </g>
+
+  <rect x="0" y="400" width="800" height="100" fill="#101b24"/>
+  <text x="400" y="450" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">Equipo TecnoShop</text>
+  <text x="400" y="478" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#f2f2f2" text-anchor="middle">Foto provisional — próximamente la foto real</text>
+</svg>
