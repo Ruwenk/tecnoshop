@@ -11,6 +11,21 @@
     align-items: flex-start;
   }
 
+  .nav__buscador {
+    width: 100%;
+    max-width: none;
+  }
+
+  .nav__buscador-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .nav__buscador-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .contacto__layout {
     grid-template-columns: 1fr;
     text-align: center;
@@ -18,6 +33,19 @@
 
   .redes {
     align-items: center;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 380px) {
+  .nav__buscador-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav__buscador-btn svg {
+    width: 18px;
+    height: 18px;
   }
 }
 

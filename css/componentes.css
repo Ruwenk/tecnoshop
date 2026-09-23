@@ -46,6 +46,60 @@
   flex-wrap: wrap;
 }
 
+/* ---------- Buscador del header ---------- */
+.nav__buscador {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1 1 220px;
+  max-width: 280px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.5rem 0.4rem 0.9rem;
+}
+
+.nav__buscador:focus-within {
+  border-color: var(--color-lime);
+}
+
+.nav__buscador input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 0.85rem;
+}
+
+.nav__buscador input:focus {
+  outline: none;
+}
+
+.nav__buscador input::placeholder {
+  color: var(--color-muted);
+}
+
+.nav__buscador-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: var(--color-white);
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav__buscador-btn:hover {
+  color: var(--color-lime);
+}
+
 .nav__links a {
   color: var(--color-white);
   font-weight: 700;
@@ -156,6 +210,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 3rem;
+}
+
+.catalogo__grid .card[hidden] {
+  display: none;
+}
+
+.catalogo__sin-resultados {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--color-muted);
 }
 
 /* ---------- Tarjetas ---------- */
