@@ -7,7 +7,7 @@
   'use strict';
 
   const STORAGE_KEY = 'tecnoshop_carrito';
-  const WHATSAPP = '573000000000'; // TODO: reemplazar por el número real de TecnoShop
+  const WHATSAPP = '573147133443'; // TODO: reemplazar por el número real de TecnoShop
 
   /* ---------- Estado ---------- */
 
