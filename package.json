@@ -1,0 +1,28 @@
+{
+  "name": "tecnoshop",
+  "version": "1.0.0",
+  "description": "Sitio web estático para la promoción de servicios de mantenimiento técnico, activación de software y venta de accesorios de cómputo.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruwenk/tecnoshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ruwenk/tecnoshop/issues"
+  },
+  "homepage": "https://github.com/Ruwenk/tecnoshop#readme",
+  "devDependencies": {
+    "jsdom": "^30.1.2",
+    "vitest": "^5.0.3"
+  }
+}
