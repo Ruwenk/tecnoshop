@@ -24,7 +24,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(carrito));
     } catch (e) {
-      /* almacenamiento no disponible: el carrito vive solo en memoria */
+    
     }
     render();
   }
