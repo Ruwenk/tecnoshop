@@ -204,6 +204,12 @@
   text-align: center;
 }
 
+.catalogo__nota {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 0;
+  text-align: center;
+}
+
 .catalogo__grid {
   max-width: var(--max-width);
   margin: 0 auto;

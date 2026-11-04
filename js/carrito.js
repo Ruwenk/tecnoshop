@@ -123,6 +123,17 @@
       vaciar: drawer.querySelector('[data-vaciar]')
     };
 
+    // Si una imagen no carga (ruta vieja en localStorage, archivo faltante),
+    // se reemplaza por el placeholder en vez de mostrar el ícono roto.
+    refs.items.addEventListener('error', function (ev) {
+      const img = ev.target;
+      if (!img.classList || !img.classList.contains('carrito-item__img')) return;
+      const ph = document.createElement('div');
+      ph.className = 'carrito-item__img carrito-item__img--ph';
+      ph.textContent = '🛒';
+      img.replaceWith(ph);
+    }, true);
+
     overlay.addEventListener('click', cerrarDrawer);
     refs.cerrar.addEventListener('click', cerrarDrawer);
     refs.vaciar.addEventListener('click', vaciarCarrito);
@@ -226,7 +237,7 @@
   function filaItem(p) {
     const subtotal = formatoCOP.format(p.precio * p.cantidad);
     const media = p.imagen
-      ? '<img src="' + p.imagen + '" alt="" class="carrito-item__img">'
+      ? '<img src="' + p.imagen + '" alt="" class="carrito-item__img" loading="lazy">'
       : '<div class="carrito-item__img carrito-item__img--ph">🛒</div>';
     return [
       '<div class="carrito-item" data-item-id="' + p.id + '">',
