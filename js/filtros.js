@@ -1,8 +1,4 @@
-// TecnoShop — Filtros y buscador
-// Quincena 7: búsqueda en tiempo real sobre el catálogo de productos.
-// El campo de búsqueda vive en el header (.nav__buscador) y está presente
-// en todas las páginas: en Productos filtra en vivo, en el resto navega
-// a productos.html?buscar=texto (funciona igual sin JavaScript).
+
 
 (function () {
   'use strict';
