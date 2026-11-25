@@ -28,21 +28,29 @@
     return 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(mensaje);
   }
 
-  function tarjetaProducto(producto) {
-    const emoji = EMOJI_POR_CATEGORIA[producto.categoria] || '🛒';
-    return [
-      '<article class="card" data-id="' + producto.id + '" data-nombre="' + producto.nombre + '" data-precio="' + producto.precio + '" data-imagen="' + producto.imagen + '">',
-      '  <div class="card__img">' + emoji + '</div>',
-      '  <h2>' + producto.nombre + '</h2>',
-      '  <p>' + producto.descripcion + '</p>',
-      '  <p class="card__precio">Valor: ' + formatoCOP.format(producto.precio) + '</p>',
-      '  <div class="card__acciones">',
-      '    <button type="button" class="btn btn--small" data-agregar>Agregar al carrito</button>',
-      '    <a class="btn btn--small btn--comprar" href="' + enlaceWhatsapp(producto) + '" target="_blank" rel="noopener">Comprar</a>',
-      '  </div>',
-      '</article>'
-    ].join('');
+  function contenidoImagen(producto) {
+  if (producto.imagen) {
+    return '<img src="' + producto.imagen + '" alt="' + producto.nombre +
+      '" loading="lazy" onerror="this.replaceWith(document.createTextNode(\'' +
+      (EMOJI_POR_CATEGORIA[producto.categoria] || '🛒') + '\'))">';
   }
+  return EMOJI_POR_CATEGORIA[producto.categoria] || '🛒';
+}
+
+function tarjetaProducto(producto) {
+  return [
+    '<article class="card" data-id="' + producto.id + '" data-nombre="' + producto.nombre + '" data-precio="' + producto.precio + '" data-imagen="' + (producto.imagen || '') + '">',
+    '  <div class="card__img">' + contenidoImagen(producto) + '</div>',
+    '  <h2>' + producto.nombre + '</h2>',
+    '  <p>' + producto.descripcion + '</p>',
+    '  <p class="card__precio">Valor: ' + formatoCOP.format(producto.precio) + '</p>',
+    '  <div class="card__acciones">',
+    '    <button type="button" class="btn btn--small" data-agregar>Agregar al carrito</button>',
+    '    <a class="btn btn--small btn--comprar" href="' + enlaceWhatsapp(producto) + '" target="_blank" rel="noopener">Comprar</a>',
+    '  </div>',
+    '</article>'
+  ].join('');
+}
 
   function renderTarjetas(lista, contenedor) {
     if (!lista.length) {
