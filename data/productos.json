@@ -5,15 +5,15 @@
     "descripcion": "Mouse genius alta resistencia.",
     "precio": 35000,
     "categoria": "mouse",
-    "imagen": "assets/img/productos/mouse-inalambrico.svg"
+    "imagen": "assets/img/productos/mouse.jpg"
   },
   {
     "id": "p002",
-    "nombre": "Teclado retroiluminado",
-    "descripcion": "Teclado RGB inalámbrico.",
+    "nombre": "Teclado inalámbrico",
+    "descripcion": "Teclado inalámbrico compacto color negro.",
     "precio": 55000,
     "categoria": "teclado",
-    "imagen": "assets/img/productos/teclado-retroiluminado.svg"
+    "imagen": "assets/img/productos/teclado inalambrico.jpg"
   },
   {
     "id": "p003",
@@ -21,7 +21,7 @@
     "descripcion": "Resistente, con ventiladores.",
     "precio": 45000,
     "categoria": "accesorios",
-    "imagen": "assets/img/productos/base-portatil.svg"
+    "imagen": "assets/img/productos/base refrigerante.jpg"
   },
   {
     "id": "p004",
@@ -29,7 +29,7 @@
     "descripcion": "Paquete de memorias USB de 32 GB c/u.",
     "precio": 100000,
     "categoria": "almacenamiento",
-    "imagen": "assets/img/productos/memorias-usb.svg"
+    "imagen": "assets/img/productos/memorias.jpg"
   },
   {
     "id": "p005",
@@ -37,7 +37,7 @@
     "descripcion": "Inalámbricos, con accesorios.",
     "precio": 80000,
     "categoria": "audio",
-    "imagen": "assets/img/productos/audifonos-diadema.svg"
+    "imagen": "assets/img/productos/auriculares.jpg"
   },
   {
     "id": "p006",
@@ -45,6 +45,6 @@
     "descripcion": "Mousepad gamer XL, superficie antideslizante.",
     "precio": 25000,
     "categoria": "accesorios",
-    "imagen": "assets/img/productos/mousepad-gamer.svg"
+    "imagen": "assets/img/productos/padmouse.webp"
   }
 ]
